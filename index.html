@@ -2,6 +2,16 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="../assets/js/aframe.min.js"></script>
+    <script>
+      var box = document.querySelector('a-box');
+      box.addEventListener('mouseenter', function () {
+        box.setAttribute('scale', {x: 1.2, y: 1.2, z: 1.2});
+      });
+      box.addEventListener('mouseleave', function () {
+        box.setAttribute('scale', {x: 1, y: 1, z: 1});
+      });
+      </script>
   </head>
   <body>
     <a-scene>
@@ -11,6 +21,7 @@
 
         <a-camera
         position="0 1.6 0">
+        <a-cursor></a-cursor>
         </a-camera> <!-- 1.6 altura promedio si ojos estuvieran a 1.6 -->
 
         <a-light

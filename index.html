@@ -9,8 +9,14 @@
             <img src="https://raw.githubusercontent.com/anavillanuevaurjc/FiveJuly/main/flor.jpg" id="flower">
         </a-assets>
 
-        <a-sphere
+        <a-camera
+        position="0 1.6 0">
+        </a-camera> <!-- 1.6 altura promedio si ojos estuvieran a 1.6 -->
 
+        <a-light
+        color="purple"></a-light>
+
+        <a-sphere
         src="#flower"
         position="-2 0.5 -5"
         geometry="radius: 0.5"

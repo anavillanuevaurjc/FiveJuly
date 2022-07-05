@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="../assets/js/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <img src="https://raw.githubusercontent.com/anavillanuevaurjc/FiveJuly/main/flor.jpg" id="flower">
+        </a-assets>
+
+        <a-entity
+        camera
+        look-controls
+        position="0 1.6 0">
+        <a-cursor
+        color="purple"></a-cursor>
+        </a-entity>
+        
+        
+        <!-- 1.6 altura promedio si ojos estuvieran a 1.6 -->
+
+        <a-light
+        type="ambient"
+        color="grey"
+        light></a-light>
+        <!--
+          Bombilla 
+        -->
+        <a-light
+        type="point"
+        intensity="2"
+        position="0 10 -5"></a-light>
+
+        <a-text
+        value="Bienvenida"
+        scale="4 4 4"
+        color="pink"
+        position="-2 3 -5"></a-text>
+
+        <a-box
+        material="color: purple"
+        scale="5 2 1"
+        position="0.3 3 -6"
+        ></a-box>
+
+        <a-sphere
+        src="#flower"
+        position="-2 0.5 -5"
+        geometry="radius: 0.5"
+        rotation="0.5 0 0"
+        animation="property: position; from: -2 0.5 -5; to: -2 0.5 0; dir: alternate; loop: true; dur: 5000">
+        </a-sphere>
+
+        <a-box
+        material="color: pink"
+        position="0 0.5 -5"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        </a-box>
+
+        <a-sphere
+        material="src: #flower"
+        position="2 0.5 -5"
+        geometry="radius: 0.5"
+        animation="property: position; from: 2 0.5 -5; to: 2 0.5 0; dir: alternate; loop: true; dur: 5000">
+        </a-sphere>
+
+        <a-plane
+        scale="15 15 15"
+        rotation="-90 0 0" 
+        color="grey">
+        </a-plane>
+
+        <a-sky
+        color="black">
+        </a-sky>
+
+        <a-entity
+          animation="property: rotation; form: 0 0 -180; to: 0 0 180; loop: true; dur: 10000">
+          <a-light
+          type="point"
+          color="yellow"
+          position="0 5 0"></a-light>
+        </a-entity>
+
+
+    </a-scene>
+  </body>
+</html>
+      
